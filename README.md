@@ -2,7 +2,7 @@
 Bonjour Betclic
 Merci de m'avoir donné l'opportunité d'effectuer ce test. 
 Je serai ravi de vous rencontrer.
-A bientôt j'espere
+A bientôt j'espere ! :)
 
 # Betclic Coding Assignment 2020
 
