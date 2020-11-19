@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Detail Ticket</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Ticket n°{{this.ticket.id}}</h2>
+
+            <!-- Formulaire de détail d'un ticket -->
+            <form> 
+                <div class="form-group">
+                    <label for="FormControlSelect1">Attribuer à:</label>
+                    <select class="form-control" id="FormControlSelect">
+                        <option>{{this.userAssigned.name}}</option>
+                        <option *ngFor="let user of users$ | async" [value]="user.id">{{user.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="FormControlSelect1">Statut</label>
+                    <select class="form-control" id="FormControlSelect">
+                        <option>ouvert</option>
+                        <option>ferme</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label>Description:</label>
+                  <textarea #desc class="form-control" id="FormControlTextarea" rows="3">{{this.ticket.description}}</textarea>
+                </div>
+                <button routerLink="/listeTicket" type="button" class="btn btn-outline-primary btn-block" (click)="enregistrer()">Enregistrer</button>
+              </form>
+           
+        </div>
+        
+    </body>
+</html>
+
